@@ -4,9 +4,23 @@ A production-ready Single Page Application (SPA) with fully decoupled frontend a
 
 ## Live Application
 
-- **Frontend**: [https://v55-frontend.web.app](https://v55-frontend.web.app)
-- **Backend Health Check**: [https://v55-backend-5ab44bfcd040.herokuapp.com/api/health](https://v55-backend-5ab44bfcd040.herokuapp.com/api/health)
-- **API Documentation (Swagger)**: [https://v55-backend-5ab44bfcd040.herokuapp.com/api-docs](https://v55-backend-5ab44bfcd040.herokuapp.com/api-docs)
+- **Main Application**: [https://159.65.173.35.nip.io](https://159.65.173.35.nip.io)
+- **Frontend** (NGINX on port 80): [https://159.65.173.35.nip.io](https://159.65.173.35.nip.io)
+- **Backend API** (Node.js on port 3000): [https://159.65.173.35.nip.io/api](https://159.65.173.35.nip.io/api)
+- **Backend Health Check**: [https://159.65.173.35.nip.io/api/health](https://159.65.173.35.nip.io/api/health)
+- **API Documentation (Swagger)**: [https://159.65.173.35.nip.io/api-docs](https://159.65.173.35.nip.io/api-docs)
+
+### Deployment Architecture
+- **Server**: Single DigitalOcean Droplet (159.65.173.35)
+- **Frontend**: NGINX reverse proxy serving React SPA on port 80 (HTTPS)
+- **Backend**: Node.js/Express API on port 3000 (proxied through NGINX)
+- **Database**: MySQL running locally on the server
+- **Process Manager**: PM2 ensuring 24/7 backend availability
+- **SSL/TLS**: Self-signed certificate for HTTPS encryption
+
+### Archived Deployments
+- **Firebase Frontend** (deprecated): [https://v55-frontend.web.app](https://v55-frontend.web.app)
+- **Heroku Backend** (deprecated): [https://v55-backend-5ab44bfcd040.herokuapp.com/api/health](https://v55-backend-5ab44bfcd040.herokuapp.com/api/health)
 
 ## Tech Stack
 
