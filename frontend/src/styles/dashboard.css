@@ -1,0 +1,237 @@
+/* Dashboard - BEM Methodology */
+
+/* Block: dashboard */
+.dashboard {
+  @apply min-h-screen bg-gray-50;
+}
+
+/* Block: dashboard__nav */
+.dashboard__nav {
+  @apply bg-white shadow-sm border-b border-gray-200;
+}
+
+.dashboard__nav-content {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between;
+}
+
+/* Block: dashboard__nav-brand */
+.dashboard__nav-brand {
+  @apply flex items-center space-x-2;
+}
+
+.brand-icon-small {
+  @apply text-2xl;
+}
+
+.dashboard__nav-title {
+  @apply text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-800 bg-clip-text text-transparent;
+}
+
+.dashboard__nav-actions {
+  @apply flex items-center space-x-4;
+}
+
+/* Block: dashboard__user-info */
+.dashboard__user-info {
+  @apply flex items-center space-x-3;
+}
+
+/* Block: user-avatar */
+.user-avatar {
+  @apply w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center text-white font-semibold text-lg shadow-md;
+}
+
+/* Block: user-name */
+.user-name {
+  @apply text-gray-700 font-medium hidden sm:block;
+}
+
+/* Block: dashboard__main */
+.dashboard__main {
+  @apply py-8;
+}
+
+.dashboard__container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8;
+}
+
+/* Block: dashboard__welcome */
+.dashboard__welcome {
+  @apply bg-white rounded-2xl shadow-md p-8 border border-gray-100;
+}
+
+.dashboard__welcome-title {
+  @apply text-3xl font-bold text-gray-900 mb-2;
+}
+
+.dashboard__welcome-subtitle {
+  @apply text-gray-600 text-lg;
+}
+
+/* Block: stats-grid */
+.stats-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+/* Block: stat-card */
+.stat-card {
+  @apply bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-300 flex items-start space-x-4;
+}
+
+.stat-card__icon {
+  @apply w-14 h-14 rounded-lg flex items-center justify-center flex-shrink-0;
+}
+
+.stat-card__icon--blue {
+  @apply bg-blue-100 text-blue-600;
+}
+
+.stat-card__icon--green {
+  @apply bg-green-100 text-green-700;
+}
+
+.stat-card__icon--teal {
+  @apply bg-teal-100 text-teal-700;
+}
+
+.stat-card__icon--emerald {
+  @apply bg-emerald-100 text-emerald-700;
+}
+
+.stat-card__icon--purple {
+  @apply bg-purple-100 text-purple-600;
+}
+
+.stat-card__icon--orange {
+  @apply bg-orange-100 text-orange-600;
+}
+
+.stat-card__content {
+  @apply flex-1;
+}
+
+.stat-card__label {
+  @apply text-sm text-gray-600 mb-1;
+}
+
+.stat-card__value {
+  @apply text-2xl font-bold text-gray-900;
+}
+
+/* Block: info-section */
+.info-section {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6;
+}
+
+/* Block: info-card */
+.info-card {
+  @apply bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden;
+}
+
+.info-card--full-width {
+  @apply lg:col-span-2;
+}
+
+.info-card__header {
+  @apply bg-gradient-to-r from-green-50 to-emerald-100 px-6 py-4 border-b border-gray-200;
+}
+
+.info-card__title {
+  @apply text-xl font-bold text-gray-900;
+}
+
+.info-card__body {
+  @apply p-6;
+}
+
+/* Block: content-section */
+.content-section {
+  @apply space-y-4;
+}
+
+.content-subtitle {
+  @apply text-lg font-semibold text-gray-800 mb-3;
+}
+
+.content-paragraph {
+  @apply text-gray-700 leading-relaxed text-justify;
+}
+
+.content-reference {
+  @apply mt-6 p-4 bg-green-50 border-l-4 border-green-600 rounded;
+}
+
+.reference-link {
+  @apply text-green-700 hover:text-green-900 underline font-medium transition-colors;
+}
+
+.reference-link:focus {
+  @apply outline-none ring-2 ring-green-500 ring-offset-2 rounded;
+}
+
+/* Block: info-item */
+.info-item {
+  @apply flex justify-between items-center py-3 border-b border-gray-100 last:border-b-0;
+}
+
+.info-item__label {
+  @apply text-gray-600 font-medium;
+}
+
+.info-item__value {
+  @apply text-gray-900 font-semibold;
+}
+
+/* Block: badge */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge--success {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge--warning {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge--danger {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Block: action-list */
+.action-list {
+  @apply space-y-3;
+}
+
+/* Block: action-button */
+.action-button {
+  @apply w-full flex items-center space-x-3 px-4 py-3 rounded-lg bg-gray-50 hover:bg-green-50 hover:text-green-700 text-gray-700 transition-all duration-200 border border-gray-200 hover:border-green-200;
+}
+
+.action-button__icon {
+  @apply w-6 h-6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .dashboard__welcome-title {
+    @apply text-2xl;
+  }
+
+  .stats-grid {
+    @apply gap-4;
+  }
+
+  .stat-card {
+    @apply p-4;
+  }
+
+  .stat-card__icon {
+    @apply w-12 h-12;
+  }
+
+  .stat-card__value {
+    @apply text-xl;
+  }
+}

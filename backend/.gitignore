@@ -1,0 +1,13 @@
+node_modules
+.env
+*.log
+.DS_Store
+
+# Logs directory
+logs/
+
+# SSL Certificates (self-signed for development)
+ssl/
+*.pem
+*.key
+*.crt
