@@ -7,10 +7,12 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
   server: {
-    https: {
-      key: fs.readFileSync(path.resolve(__dirname, 'ssl/key.pem')),
-      cert: fs.readFileSync(path.resolve(__dirname, 'ssl/cert.pem')),
-    },
+    https: process.env.NODE_ENV !== 'production' && fs.existsSync(path.resolve(__dirname, 'ssl/key.pem')) 
+      ? {
+          key: fs.readFileSync(path.resolve(__dirname, 'ssl/key.pem')),
+          cert: fs.readFileSync(path.resolve(__dirname, 'ssl/cert.pem')),
+        }
+      : false,
     port: 5173,
     host: true,
   },
