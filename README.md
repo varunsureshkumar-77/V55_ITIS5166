@@ -2,6 +2,12 @@
 
 A production-ready Single Page Application (SPA) with fully decoupled frontend and backend architecture. This project demonstrates modern web development practices including secure authentication, HTTPS/TLS encryption, OAuth 2.0 integration, API documentation, and process management.
 
+## Live Application
+
+- **Frontend**: [https://v55-frontend.web.app](https://v55-frontend.web.app)
+- **Backend API**: [https://v55-backend-5ab44bfcd040.herokuapp.com/api](https://v55-backend-5ab44bfcd040.herokuapp.com/api)
+- **API Documentation (Swagger)**: [https://v55-backend-5ab44bfcd040.herokuapp.com/api-docs](https://v55-backend-5ab44bfcd040.herokuapp.com/api-docs)
+
 ## Tech Stack
 
 ### Frontend
@@ -286,5 +292,3 @@ SESSION_SECRET=your_session_secret_change_this
 ## License
 
 This project is developed for educational purposes as part of the NBAD course at the University of North Carolina at Charlotte.
-
-# V55_ITIS5166
