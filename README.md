@@ -9,6 +9,7 @@ A production-ready Single Page Application (SPA) with fully decoupled frontend a
 - **Backend API** (Node.js on port 3000): [https://159.65.173.35.nip.io/api](https://159.65.173.35.nip.io/api)
 - **Backend Health Check**: [https://159.65.173.35.nip.io/api/health](https://159.65.173.35.nip.io/api/health)
 - **API Documentation (Swagger)**: [https://159.65.173.35.nip.io/api-docs](https://159.65.173.35.nip.io/api-docs)
+- **Lighthouse Accessibility Report**: [PageSpeed Insights](https://pagespeed.web.dev/analysis/https-v55-frontend-web-app/kt4wvtqtkq?hl=en-GB&form_factor=desktop)
 
 ### Deployment Architecture
 - **Server**: Single DigitalOcean Droplet (159.65.173.35)
