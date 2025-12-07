@@ -58,9 +58,11 @@ const Login = () => {
 
     if (!formData.email) {
       errors.email = 'Email is required';
-    } else if (!validateEmail(formData.email)) {
-      errors.email = 'Please enter a valid email address';
     }
+    // Temporarily removed email format validation to allow "varun" as username
+    // else if (!validateEmail(formData.email)) {
+    //   errors.email = 'Please enter a valid email address';
+    // }
 
     if (!formData.password) {
       errors.password = 'Password is required';
@@ -123,7 +125,7 @@ const Login = () => {
                   Email Address
                 </label>
                 <input
-                  type="email"
+                  type="text"
                   id="email"
                   name="email"
                   value={formData.email}
