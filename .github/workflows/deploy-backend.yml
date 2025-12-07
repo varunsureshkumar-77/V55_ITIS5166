@@ -41,11 +41,19 @@ jobs:
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: |
-          git config --global user.email "${{ secrets.HEROKU_EMAIL }}"
-          git config --global user.name "GitHub Actions"
+          # Authenticate with Heroku
+          cat > ~/.netrc <<EOF
+          machine api.heroku.com
+            login ${{ secrets.HEROKU_EMAIL }}
+            password ${{ secrets.HEROKU_API_KEY }}
+          machine git.heroku.com
+            login ${{ secrets.HEROKU_EMAIL }}
+            password ${{ secrets.HEROKU_API_KEY }}
+          EOF
+          chmod 600 ~/.netrc
           
           # Add Heroku remote
-          heroku git:remote -a ${{ secrets.HEROKU_APP_NAME }}
+          git remote add heroku https://git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git || true
           
           # Deploy only the backend subdirectory using git subtree
           git push heroku `git subtree split --prefix backend HEAD`:refs/heads/main --force
