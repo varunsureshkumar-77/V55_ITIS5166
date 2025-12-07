@@ -35,6 +35,8 @@ jobs:
         
       - name: Build frontend
         working-directory: ./frontend
+        env:
+          VITE_API_URL: https://v55-backend-5ab44bfcd040.herokuapp.com/api
         run: npm run build
         
       - name: Deploy preview to Firebase Hosting

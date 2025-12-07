@@ -1,0 +1,9 @@
+ssl/
+logs/
+node_modules/
+*.pem
+*.key
+*.crt
+.env
+.env.local
+.DS_Store

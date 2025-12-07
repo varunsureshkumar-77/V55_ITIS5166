@@ -1,5 +1,8 @@
 import AuthNavbar from '../components/AuthNavbar';
 import '../styles/projectinfo.css';
+import config from '../config/api.config';
+
+const API_BASE_URL = config.apiUrl.replace('/api', '');
 
 const ProjectInfo = () => {
   return (
@@ -222,11 +225,11 @@ const ProjectInfo = () => {
             Built for NBAD Course - University of North Carolina at Charlotte
           </p>
           <div className="project-info__footer-links">
-            <a href="https://localhost:5000/api-docs" target="_blank" rel="noopener noreferrer" className="project-info__footer-link">
+            <a href={`${API_BASE_URL}/api-docs`} target="_blank" rel="noopener noreferrer" className="project-info__footer-link">
               View API Docs
             </a>
             <span className="project-info__footer-separator">•</span>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="project-info__footer-link">
+            <a href="https://github.com/varunsureshkumar-77/V55_ITIS5166" target="_blank" rel="noopener noreferrer" className="project-info__footer-link">
               GitHub Repository
             </a>
           </div>

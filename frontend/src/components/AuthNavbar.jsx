@@ -53,7 +53,7 @@ const AuthNavbar = () => {
               `landing-nav__link ${isActive ? 'landing-nav__link--active' : ''}`
             }
           >
-            Project Information
+            Project Info
           </NavLink>
 
           <span className="landing-nav__user">

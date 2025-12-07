@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, Navigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import config from '../config/api.config';
+
+const API_BASE_URL = config.apiUrl.replace('/api', '');
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -196,7 +199,7 @@ const Login = () => {
 
               <button
                 type="button"
-                onClick={() => window.location.href = 'https://localhost:5000/api/auth/google'}
+                onClick={() => window.location.href = `${API_BASE_URL}/api/auth/google`}
                 className="btn btn--google btn--full"
               >
                 <svg className="btn__icon" viewBox="0 0 24 24" width="20" height="20">

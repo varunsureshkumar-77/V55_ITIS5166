@@ -1,4 +1,6 @@
-const API_URL = 'https://localhost:5000/api';
+import config from '../config/api.config.js';
+
+const API_URL = config.apiUrl;
 
 const apiService = {
   auth: {

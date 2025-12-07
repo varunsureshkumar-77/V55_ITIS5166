@@ -25,6 +25,7 @@ if (!process.env.JWT_SECRET) {
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const isProduction = process.env.NODE_ENV === 'production';
 
 app.use(cors({
   origin: process.env.FRONTEND_URL || 'http://localhost:5173',
@@ -38,10 +39,10 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: process.env.USE_HTTPS === 'true', // Require HTTPS when enabled
-    httpOnly: true, // Prevent XSS attacks
-    sameSite: 'lax', // CSRF protection
-    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+    secure: process.env.USE_HTTPS === 'true' || isProduction,
+    httpOnly: true,
+    sameSite: 'lax',
+    maxAge: 24 * 60 * 60 * 1000
   }
 }));
 
@@ -82,7 +83,7 @@ app.use((req, res) => {
 });
 
 // Load SSL certificates
-const useHTTPS = process.env.USE_HTTPS === 'true';
+const useHTTPS = process.env.USE_HTTPS === 'true' && !isProduction;
 let server;
 
 if (useHTTPS) {
@@ -107,7 +108,8 @@ if (useHTTPS) {
 } else {
   server = http.createServer(app);
   server.listen(PORT, () => {
-    console.log(`HTTP Server is running on http://localhost:${PORT}`);
+    const protocol = isProduction ? 'https' : 'http';
+    console.log(`${protocol.toUpperCase()} Server is running on port ${PORT}`);
   });
 }
 
