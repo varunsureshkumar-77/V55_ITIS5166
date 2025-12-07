@@ -5,7 +5,7 @@ A production-ready Single Page Application (SPA) with fully decoupled frontend a
 ## Live Application
 
 - **Frontend**: [https://v55-frontend.web.app](https://v55-frontend.web.app)
-- **Backend API**: [https://v55-backend-5ab44bfcd040.herokuapp.com/api](https://v55-backend-5ab44bfcd040.herokuapp.com/api)
+- **Backend Health Check**: [https://v55-backend-5ab44bfcd040.herokuapp.com/api/health](https://v55-backend-5ab44bfcd040.herokuapp.com/api/health)
 - **API Documentation (Swagger)**: [https://v55-backend-5ab44bfcd040.herokuapp.com/api-docs](https://v55-backend-5ab44bfcd040.herokuapp.com/api-docs)
 
 ## Tech Stack
